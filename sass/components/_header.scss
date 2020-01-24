@@ -1,0 +1,103 @@
+.header{
+    position: relative;
+    height: 100vh;
+    background-image: url(../img/bedroom_medium_2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: 1px;
+    transition: 0.5s;
+    &.show{
+        filter: blur(7px);
+    }
+    @media (orientation: landscape) {
+        background-position-y: 50%;//moze tego neibyc to tylko przyklad
+    }
+    &__intro{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        @media (orientation: landscape) {
+            top:50%;
+        }
+        &-logo{
+            height: 100px;
+            width: 100px;
+            margin: 0 auto;
+            line-height: 100px;
+            font-size: 80px;
+            margin-bottom: 6vh;
+            @media (min-width:1200px){
+                height: 200px;
+                width: 200px;
+                line-height: 200px;
+                font-size: 160px;
+            }
+            a{
+                cursor: default;
+            }
+        }
+        &-name{
+            position: relative;
+            font-size: 5rem;
+            text-align: center;
+            font-family: tinos; // dodac zmienna
+            color: white;
+            letter-spacing: 12px;
+            width: 100%;
+            &::first-letter{
+                color: $main-logo-color;
+            }
+            @media (orientation: landscape) {
+                font-size: 4rem;
+            }
+            @media (min-width:1024px) and (orientation: landscape){
+                font-size: 10rem;
+            }
+            @media (min-width:640px) and (orientation: portrait){
+                font-size: 10rem;
+            }
+            @media (min-width:1200px){
+                font-size: 15rem;
+            }
+            /*
+            &::after{
+                content: '';
+                position: absolute;
+                width: 60%;
+                height: 2px;
+                background-color: $main-logo-color;
+                bottom: 42%;
+                left: 50%;
+                transform: translateX(-50%);
+            }*/
+            @include after-content{
+                width: 80%;
+                height: 2px;
+                background-color: $main-logo-color;
+                bottom: 42%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            span{
+                display: block;
+                font-size: 4rem;
+                @media (orientation: landscape) {
+                    font-size: 3rem;
+                }
+                @media (min-width:1024px) and (orientation: landscape){
+                    font-size: 8rem;
+                }
+                @media (min-width:640px) and (orientation: portrait){
+                    font-size: 8rem;
+                }
+                @media (min-width:1200px){
+                    font-size: 12rem;
+                }
+            }
+        }
+    }
+}

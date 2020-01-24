@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Patryk Zmuda-Trzebiatowski">
+    <meta name="robots" content="index, follow">
+    <!--https://developers.google.com/search/reference/robots_meta_tag?hl=pl-->
+
+    <title>Projekt_2</title> <!--dobra praktyka: do 60 znaków-->
+    <!--https://support.google.com/webmasters/answer/35624?hl=pl-->
+
+    <meta name="description" content="Hotel, GRID, FLEX, SCSS, BEM, JS"> <!--dobra praktyka: do 160 znaków-->
+    <!--https://support.google.com/webmasters/answer/35624?hl=pl-->
+
+    <meta name="keywords" content="Hotel, GRID, FLEX, SCSS, BEM, JS"> <!--Pdobno google juz go nie uzywa, ale może przydać się dla innych wyszukiwarek-->
+
+
+    <script src="https://kit.fontawesome.com/d12ccddb36.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <nav class="navigation header__navigation">
+        <div class="logo navigation__logo">
+            <a href="#header">G</a>
+        </div>
+        <div class="navigation__mobile-btns">        
+            <i class="fas fa-bars show"></i>
+            <i class="fas fa-times"></i>
+        </div>
+        <ul class="navigation__list">
+            <div class="logo navigation__list-logo">
+                <a href="#">G</a>
+            </div>
+            <li class="navigation__list-element hide"><a href="#header">Strona Główna</a></li>
+            <li class="navigation__list-element hide"><a href="#gallery">Galeria</a></li>
+            <li class="navigation__list-element hide"><a href="#gallery">Cennik</a></li>
+            <li class="navigation__list-element hide"><a href="#map">Mapa</a></li>
+            <li class="navigation__list-element hide"><a href="#footer">Kontakt</a></li>
+        </ul>
+    </nav>
+    
+    <header id="header" class="header ">
+        <div class="header__intro">
+            <div class="logo header__intro-logo">
+                <a href="#">G</a>
+            </div>
+            <h1 class="name header__intro-name">Gościniec <span>Płock</span></h1>
+        </div>
+        <div class="scroll-down header__scroll-down">
+            <i class="fas fa-chevron-down"></i>
+            <p>scroll</p>
+        </div>
+
+        <div class="hero-bg header__hero-bg"></div>
+    </header>
+
+
+    <section id="gallery" class="gallery wrapper">
+        <h2 class="section-header gallery__header">Nasze pokoje</h2>
+        <div class="gallery__item gallery__item--one">
+            <div class="gallery__img-holder">
+                <div class="hero-bg gallery__item-hero-bg"></div>
+                <img class="gallery__item-img" src="img/hotel.jpg" alt="">
+            </div>
+
+            <div class="gallery__text-holder">
+                <h3 class="gallery__text-header">Premium</h3>
+                <p class="gallery__text-describe">Pokoje skierowane dla bardziej wymagających klientów.</p>
+
+                <a class="gallery__text-holder-details" href="#"><i class="fas fa-dollar-sign"></i> 100-140 PLN/pok.</a>
+                <a class="gallery__text-holder-details" href="#"><i class="fas fa-door-open"></i> 3 pokoje</a>
+                <a class="gallery__text-holder-details" href="#"><i class="fas fa-bed"></i> 3 łóżka</a>
+                <a class="gallery__text-holder-details" href="#"><i class="fas fa-bath"></i> Łazienka w pokoju</a>
+            </div>
+        </div>
+        
+        <div class="gallery__item gallery__item--two">
+            <div class="gallery__img-holder">
+                <div class="hero-bg gallery__item-hero-bg"></div>
+                <img class="gallery__item-img" src="img/hotel.jpg" alt="">
+            </div>
+
+            <div class="gallery__text-holder">
+                <h3 class="gallery__text-header">Ekonomiczny</h3>
+                <p class="gallery__text-describe">Pokoje skierowane w szczególności do podróżnych na jedną noc lub kilka godzin pobytu w kwaterach w Płocku</p>
+
+                <a class="gallery__text-holder-details" href="#"><i class="fas fa-dollar-sign"></i> 80 PLN/pok.</a>
+                <a class="gallery__text-holder-details" href="#"><i class="fas fa-door-open"></i> 2 pokoje</a>
+                <a class="gallery__text-holder-details" href="#"><i class="fas fa-bed"></i> 4 łóżka</a>
+                <a class="gallery__text-holder-details" href="#"><i class="fas fa-bath"></i> Łazienka w korytarzu</a>
+            </div>
+        </div>
+        <div class="gallery__item gallery__item--three">
+            <div class="gallery__img-holder">
+                <div class="hero-bg gallery__item-hero-bg"></div>
+                <img class="gallery__item-img" src="img/hotel.jpg" alt="">
+            </div>
+
+            <div class="gallery__text-holder">
+                <h3 class="gallery__text-header">Wieloosobowy</h3>
+                <p class="gallery__text-describe">Pokoje skierowane w szczególności dla zorganizowanych grup, gości weselnych oraz firm.</p>
+
+                <a class="gallery__text-holder-details" href="#"><i class="fas fa-dollar-sign"></i> 40 PLN/os.</a>
+                <a class="gallery__text-holder-details" href="#"><i class="fas fa-door-open"></i> 3 pokoje</a>
+                <a class="gallery__text-holder-details" href="#"><i class="fas fa-bed"></i> 6-10 łóżek</a>
+                <a class="gallery__text-holder-details" href="#"><i class="fas fa-bath"></i> Łazienka w pokoju</a>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="extra-info" class="extra-info">
+        <h2 class="section-header extra-info__header">Inne usługi</h2>
+
+        <div class="extra-info__holder extra-info__holder--one">
+            <div class="extra-info__holder-circle extra-info__holder-circle--kids">
+                <!--<i class="fas fa-child extra-info__holder-img"></i>-->
+            </div>
+            <h3 class="extra-info__holder-header ">Dzieci</h3>
+            <p class="extra-info__holder-text">Dzieci do lat 7 bez dodatkowych opłat.</p>
+        </div>
+
+        <div class="extra-info__holder extra-info__holder--two">
+            <div class="extra-info__holder-circle extra-info__holder-circle--grill">
+                <!--<i class="fas fa-child extra-info__holder-img"></i>-->
+            </div>
+            <h3 class="extra-info__holder-header ">Grill</h3>
+            <p class="extra-info__holder-text">Ogródek z grillem na terenie pensjonatu.</p>
+        </div>
+
+        <div class="extra-info__holder extra-info__holder--three">
+            <div class="extra-info__holder-circle extra-info__holder-circle--parking">
+                <!--<i class="fas fa-child extra-info__holder-img"></i>-->
+            </div>
+            <h3 class="extra-info__holder-header">Parking</h3>
+            <p class="extra-info__holder-text">Parking ogrodzony na terenie pensjonatu w cenie pobytu.</p>
+        </div>
+
+        <div class="extra-info__holder extra-info__holder--four">
+            <div class="extra-info__holder-circle extra-info__holder-circle--internet">
+                <!--<i class="fas fa-child extra-info__holder-img"></i>-->
+            </div>
+            <h3 class="extra-info__holder-header">Internet</h3>
+            <p class="extra-info__holder-text">Darmowy dostęp do internetu WIFI.</p>
+        </div>
+
+    </section>
+
+    <section id="map" class="map">
+        <h2 class="section-header map__header">Mapa</h2>
+        <iframe class="map__header-img" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2161.5082468528963!2d19.704013805182672!3d52.54770798452941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471c709afd9a09a9%3A0xef7f2add2fa62344!2sGo%C5%9Bciniec!5e0!3m2!1spl!2spl!4v1579450442775!5m2!1spl!2spl" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+
+        <div class="map__text-holder">
+            <p class="map__text-holder-text">Nasz obiekt jest zlokalizowany w samym centrum miasta Płock.<hr><br> W okolicy znajduje się Dworzec, ZOO, Centra handlowe oraz stary rynek.<hr></p>
+            <!--
+            <p class="map__text-holder-text">Al. Jachowicza 8A</p>
+            <p class="map__text-holder-text">tel/fax  24-264 74 97</p>
+            <p class="map__text-holder-text">tel kom  600 769 447</p>
+            <p class="map__text-holder-text">gosciniec.plock@gmail.com</p>
+            -->
+        </div>
+
+    </section>
+
+
+    <footer id="footer" class="footer">
+        <p><i class="fas fa-mobile"></i><span>600 769 447</span></p>
+        <p><i class="fas fa-phone"></i><span>24-264 74 97</span></p>
+        <p><i class="fas fa-at"></i><span>gosciniec.plock@gmail.com</span></p>
+        <p><i class="fas fa-home"></i><span>ul. Al. Jachowicza 8A Płock</span></p>
+    </footer>
+
+    
+
+
+
+
+    <script src="js/main.js"></script>
+</body>
+</html>

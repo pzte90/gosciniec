@@ -1,0 +1,46 @@
+.map{
+    background-color: rgb(214,214,214);
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (orientation: landscape) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+    }
+    &__header{
+        line-height: 30vh;
+        margin-bottom:20px;
+        &-img{
+            display: block;
+            height: 50vh;
+            width: 90%;
+            border-radius: 2px;
+            box-shadow: 0 0 5px rgb(201, 201, 201);
+            @media (orientation: landscape) {
+                height: 80vh;
+                width: 60%;
+            }
+        }
+    }
+    &__text-holder{
+        width: 90%;
+        text-align: center;
+        font-size: 15px;
+        margin-top: 20px;
+        line-height: 25px;
+        text-shadow: 0 0 2px rgb(131, 128, 128);
+        //@media (orientation: landscape) {
+            //align-self: flex-start;
+            //margin-top: 0px;
+            //width: 30%;
+            //text-align: left;
+        //}
+        @media (min-width:1024px){
+            font-size: 30px;
+            line-height: 35px;
+        }
+    }
+}

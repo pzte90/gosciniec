@@ -1,0 +1,48 @@
+@import 'base/reset';
+@import 'base/normalize';
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=latin-ext);
+@import url(https://fonts.googleapis.com/css?family=Tinos:400,700&display=swap&subset=latin-ext);
+
+$font-size-map: (xsmall: 460 ,small: 640 ,medium: 800 ,large: 1024 , xlarge: 1200);
+
+//Zmienne
+$colors: (first: rgb(202, 2, 2), second: rgb(0, 0, 0),third: rgb(44,44,44), fourth: rgb(143,143,143));
+$main-logo-color: map-get($colors, first);
+$secondary-logo-color: map-get($colors, second);
+$fonts: (logo: Tinos);
+$logo-font:map-get($fonts, logo);
+//Mixiny
+@mixin position-center($type: absolute){
+    position: $type;
+    top: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+}
+@mixin wrapper{
+    .wrapper{
+        max-width: 1200px;
+        margin: 0 auto;
+        background-color: rgb(179, 21, 21);
+    }
+}
+@mixin after-content{
+    &::after{
+        content: '';
+        position: absolute;
+        @content;
+    }
+}
+
+
+//Komponenty uniwersalne
+@import 'components/logo';
+@import 'components/scroll_down';
+@import 'components/header_main_styles';
+
+//Budowa strony
+@import 'components/header';
+@import 'components/nav';
+@import 'components/gallery';
+@import 'components/extra_info';
+@import 'components/map';
+@import 'components/footer';

@@ -1,0 +1,27 @@
+.scroll-down{
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    font-size: 30px;
+    color: rgb(187, 187, 187);
+    text-align: center;
+    .fa-chevron-down{
+        animation: pulsate 0.8s linear infinite both;
+    }
+    p{
+        font-size: 10px;
+    }
+}
+
+  @keyframes pulsate {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+  }

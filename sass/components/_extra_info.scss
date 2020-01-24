@@ -1,0 +1,124 @@
+@keyframes slide-in-blurred-bottom {
+    0% {
+      filter: blur(40px);
+      opacity: 0;
+      top: 100vh;
+      visibility: visible;
+    }
+    100% {
+      filter: blur(0);
+      opacity: 1;
+      top:0;
+      visibility: visible;
+    }
+  };
+  
+
+
+
+
+.extra-info{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(214, 214, 214);
+    padding-bottom: 50px;
+    &__header{
+        line-height: 15vh;
+        @media (min-width: 266px) {
+            line-height: 30vh;
+        }
+    }
+    &__holder{
+        position: relative;
+        background-color: rgba(173, 173, 173, 0.349);
+        width: 90%;
+        height: 200px;
+        text-align: center;
+        margin: 80px auto;
+        border-radius: 10px;
+        visibility: hidden;
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+        &--one{
+            &.extra-info__holder--show{
+                animation: slide-in-blurred-bottom 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+            }
+        }
+        &--two{
+            &.extra-info__holder--show{
+                animation: slide-in-blurred-bottom 1.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+            }
+        }
+        &--three{
+            &.extra-info__holder--show{
+                animation: slide-in-blurred-bottom 1.1s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+            }
+        }
+        &--four{
+            &.extra-info__holder--show{
+                animation: slide-in-blurred-bottom 1.3s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+            }
+        }
+        @media (min-width:1024px){
+            width: 45%;
+            height: auto;
+            margin-bottom: auto;
+            padding-bottom: 50px;;
+            
+        }
+        &-circle{
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: solid grey;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            background-color: rgb(255, 255, 255);
+            //border: solid black 5px;
+            background-position: center;
+            background-size: cover;
+            &--kids{
+                background-image: url(../img/kids.jpg);
+            }
+            &--grill{
+                background-image: url(../img/grill.jpg);
+            }
+            &--parking{
+                background-image: url(../img/parking.jpg);
+            }
+            &--internet{
+                background-image: url(../img/internet.jpg);
+            }
+        }
+        &-img{
+            position: absolute;
+            font-size: 50px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        &-header{
+            padding-top: 60px;
+            font-size: 30px;
+            letter-spacing: 3px;
+            @media (min-width:1024px){
+                font-size: 40px;
+            }
+        }
+        &-text{
+            margin: 20px auto 0;
+            font-size: 15px;
+            width: 50%;
+            line-height: 20px;
+            @media (min-width:1024px){
+                width: 90%;
+                font-size: 25px;
+                line-height: 40px;
+            }
+        }
+    }
+}
